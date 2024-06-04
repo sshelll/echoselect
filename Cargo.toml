@@ -1,0 +1,16 @@
+[package]
+name = "echoselect"
+version = "0.1.0"
+edition = "2021"
+authors = ["sshelll"]
+description = """
+A simple command line tool to select an item from a list of items.
+Keymaps:
+- use arrow keys or the vi keys (hjkl) to navigate the list.
+- use Enter to select an item.
+- use Esc to exit without selecting an item.
+"""
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+dialoguer = "0.11.0"
