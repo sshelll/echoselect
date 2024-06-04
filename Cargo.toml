@@ -5,6 +5,13 @@ edition = "2021"
 authors = ["sshelll"]
 description = """
 A simple command line tool to select an item from a list of items.
+
+You can enter input by calling it like this:
+$ echoselect item1 item2 item3
+
+Or you can pipe the input to it(split by line):
+$ echo "item1\\nitem2\\nitem3" | echoselect
+
 Keymaps:
 - use arrow keys or the vi keys (hjkl) to navigate the list.
 - use Enter to select an item.
@@ -12,5 +19,6 @@ Keymaps:
 """
 
 [dependencies]
+assert_cmd = "2.0.14"
 clap = { version = "4.5.4", features = ["derive"] }
 dialoguer = "0.11.0"
